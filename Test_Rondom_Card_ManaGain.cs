@@ -9,12 +9,16 @@ public class Program
         //ประกาศตัวแปร สุ่ม
         Random dice = new Random();
         // bool CardRandom = true;
-        //เขียนกำหนดหัวข้อ
-		Console.WriteLine("สุ่ม Card Art/Quick/Buster");
-        Console.WriteLine("----> มาสุ่ม Card กันเถอะ! <----");
+       
         //สร้างลูป while เพื่อให้สามารถสุ่มการ์ดได้เรื่อยๆ จนกว่าผู้ใช้จะกดปุ่มอื่นที่ไม่ใช่ Spacebar
         while (CardRandom)
         {
+        //เขียนกำหนดหัวข้อ
+        Console.ForegroundColor = ConsoleColor.Cyan;
+        Console.WriteLine("---------------------------------------------");
+        Console.WriteLine("[ Richard I : มาสุ่มการ์ดกันเถอะ Master! ]");
+        Console.WriteLine("---------------------------------------------");
+        Console.ResetColor();
           //เขียน loop for เพื่อสุ่มการ์ด 5 ใบ
         for (int i = 1; i <= 5; i++){
             //สุ่มการ์ด 1-3
@@ -57,9 +61,10 @@ public class Program
         Console.ResetColor();
     }
        //พิมพ์ข้อความแนะนำให้ผู้ใช้กดปุ่ม
-        Console.WriteLine("---------------------------------------------");
+        Console.ForegroundColor = ConsoleColor. Magenta;
+        Console.WriteLine("-----------------------------------------------------------");
         Console.WriteLine($"[ Mashu: กดปุ่ม Spacebar เพื่อสุ่มต่อค่ะ Master! / กดปุ่มอื่นเพื่อออก ]");
-        Console.WriteLine("---------------------------------------------");
+        Console.WriteLine("-----------------------------------------------------------");
         //ตรวจสอบว่าผู้ใช้กดปุ่ม Spacebar หรือไม่ หากไม่ใช่จะเปลี่ยนค่า CardRandom เป็น false เพื่อออกจากลูป
         if (Console.ReadKey(true).Key != ConsoleKey.Spacebar) CardRandom = false;
         //ล้างหน้าจอคอนโซล
