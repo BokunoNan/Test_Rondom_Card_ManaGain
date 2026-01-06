@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Rondom_Card_ManaGain", "Test_Rondom_Card_ManaGain.csproj", "{8E99F747-E42F-068C-383A-65DB33D70601}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8E99F747-E42F-068C-383A-65DB33D70601}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E99F747-E42F-068C-383A-65DB33D70601}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E99F747-E42F-068C-383A-65DB33D70601}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E99F747-E42F-068C-383A-65DB33D70601}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4F545056-9611-4439-A43D-9AB1F20C3834}
+	EndGlobalSection
+EndGlobal
