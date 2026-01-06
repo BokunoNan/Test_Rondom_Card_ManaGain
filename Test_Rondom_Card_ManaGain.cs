@@ -5,15 +5,17 @@ public class Program
     
 	public static void Main()
 	{
+        bool CardRandom = true;
         //ประกาศตัวแปร สุ่ม
         Random dice = new Random();
         // bool CardRandom = true;
-        //เอาไว้เคลียร์หน้าจอ
-        Console.Clear();
         //เขียนกำหนดหัวข้อ
 		Console.WriteLine("สุ่ม Card Art/Quick/Buster");
         Console.WriteLine("----> มาสุ่ม Card กันเถอะ! <----");
-        //เขียน loop for เพื่อสุ่มการ์ด 5 ใบ
+        //สร้างลูป while เพื่อให้สามารถสุ่มการ์ดได้เรื่อยๆ จนกว่าผู้ใช้จะกดปุ่มอื่นที่ไม่ใช่ Spacebar
+        while (CardRandom)
+        {
+          //เขียน loop for เพื่อสุ่มการ์ด 5 ใบ
         for (int i = 1; i <= 5; i++){
             //สุ่มการ์ด 1-3
              int card = dice.Next(1,4);
@@ -54,12 +56,21 @@ public class Program
         Console.WriteLine($" \b {Critical * 10}%");
         Console.ResetColor();
     }
-     
-    
+       //พิมพ์ข้อความแนะนำให้ผู้ใช้กดปุ่ม
+        Console.WriteLine("---------------------------------------------");
+        Console.WriteLine($"[ Mashu: กดปุ่ม Spacebar เพื่อสุ่มต่อค่ะ Master! / กดปุ่มอื่นเพื่อออก ]");
+        Console.WriteLine("---------------------------------------------");
+        //ตรวจสอบว่าผู้ใช้กดปุ่ม Spacebar หรือไม่ หากไม่ใช่จะเปลี่ยนค่า CardRandom เป็น false เพื่อออกจากลูป
+        if (Console.ReadKey(true).Key != ConsoleKey.Spacebar) CardRandom = false;
+        //ล้างหน้าจอคอนโซล
+       Console.Clear();
+}      
 }
-    //  static void WaitForKey(ConsoleKey targetKey)
-    // {
-    //     Console.WriteLine($"[ Aoko: กดปุ่ม {targetKey} เพื่อกด 10 Roll! ]");
-    //     while (Console.ReadKey(true).Key != targetKey);
-    // }
+    //ฟังก์ชันรอการกดปุ่มที่ระบุ
+    public
+   static void WaitForKey(ConsoleKey targetKey)
+    {
+        //รอจนกว่าผู้ใช้จะกดปุ่มที่ระบุ
+        while (Console.ReadKey(true).Key != targetKey);
+    }
 }
