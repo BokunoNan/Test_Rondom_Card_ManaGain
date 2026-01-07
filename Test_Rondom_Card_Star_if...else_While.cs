@@ -70,7 +70,6 @@ public class Program
 }      
 }
     //ฟังก์ชันรอการกดปุ่มที่ระบุ
-    public
    static void WaitForKey(ConsoleKey targetKey)
     {
         //รอจนกว่าผู้ใช้จะกดปุ่มที่ระบุ
